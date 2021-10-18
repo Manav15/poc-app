@@ -46,13 +46,14 @@ const options = {
         border: 'solid 0 rgba(255, 255, 255, 0)',
         //   padding: '13px 15px 28px 17px',
         boxShadow: '0 3px 8px 0 rgba(25, 42, 70, 0.13)',
-        position: 'absolute',
-        top: '100%',
-        left: '50%',
         marginLeft: '-5px',
+        marginRight: '5px',
+        marginBottom: '5px',
+        marginTop: '5px',
         borderWidth: '5px',
         borderStyle: 'solid',
-        borderColor: '#f7f7f7 transparent transparent transparent'
+        borderColor: '#f7f7f7 transparent transparent transparent',
+        borderRadius: '3px'
     },
     plotOptions: {
         column: {
