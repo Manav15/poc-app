@@ -1,10 +1,16 @@
 import React from 'react';
+import CollapsibleTable from './TabContent';
+import styles from './Content.module.css'
+
 
 export const ContentComponent = () => {
     return (
         <div>
-            <p> Content </p>
-            <p> for APP </p>
+            
+            <div className={styles.Tables}>
+                {CollapsibleTable()}
+            </div>
         </div>
     )
 }
+
