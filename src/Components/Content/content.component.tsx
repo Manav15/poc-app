@@ -21,7 +21,7 @@ export const ContentComponent = () => {
                 <Grid item>
                     {CustomSeparator()}
                 </Grid>
-                <Grid item xs ={10} >
+                <Grid item xs ={12} >
                     <div className="container" >
                         <div className="card">
                             <div className="card-body">
