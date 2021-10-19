@@ -5,3 +5,15 @@
   background-color: rgba(255, 255, 255, 0);
   margin-bottom: 20px;
 }
+
+.heading {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #444a5a;
+
+}
