@@ -1,11 +1,16 @@
 import React from 'react';
-import Chart from '../Chart/chart.component';
+import CollapsibleTable from './TabContent';
+import styles from './Content.module.css'
 
 
 export const ContentComponent = () => {
     return (
         <div>
-            <Chart />
+            
+            <div className={styles.Tables}>
+                {CollapsibleTable()}
+            </div>
         </div>
     )
 }
+
