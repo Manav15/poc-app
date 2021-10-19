@@ -154,7 +154,7 @@ const CustomHighcharts = (props:any) => {
             <HighchartsReact
                 highcharts={Highcharts}
                 options={data}
-                style = {{width: '40%'}}
+                style = {{width: '50%'}}
             />
         </div>
     )
