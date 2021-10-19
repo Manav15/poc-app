@@ -17,6 +17,7 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import Container from '@material-ui/core/Container';
 import styles from './TabContent.module.css';
+import DownArrow from './downArrow.png';
 
 const useRowStyles = makeStyles({
   root: {
@@ -48,45 +49,48 @@ function Row(props:any) {
   return (
     <React.Fragment>
       
-      <TableRow className={classes.root}>
+      <TableRow className={classes.root} >
         
-        <TableCell>
-          <IconButton aria-label="expand row" size="small" color='default' onClick={() => setOpen(!open)}>
+        {/* <TableCell>
+          
+        </TableCell> */}
+        <TableCell style={{ width: '100px' }} component="th" scope="row" >
+        <IconButton aria-label="expand row" size="small" style={{ left:'25px', width: '10px', color: '#000' }} onClick={() => setOpen(!open)}>
             {open ? <KeyboardArrowDownIcon /> : <KeyboardArrowRightIcon />}
           </IconButton>
+          <label style={{ marginLeft:'50px', fontSize: '14px', fontWeight: 'bold', color: '#004795' }}>{row.name}</label>
         </TableCell>
-        <TableCell component="th" scope="row">
-          {row.name}
-        </TableCell>
-        <TableCell align="right">{row.lastYear}</TableCell>
-        <TableCell align="right">{row.mtd}</TableCell>
-        <TableCell align="right">{row.qtd}</TableCell>
-        <TableCell align="right">{row.ytd}</TableCell>
+        <TableCell style={{ width: '100px' }} align="right">{row.lastYear}</TableCell>
+        <TableCell style={{ width: '100px' }} align="right">{row.mtd}</TableCell>
+        <TableCell style={{ width: '100px' }} align="right">{row.qtd}</TableCell>
+        <TableCell style={{ width: '100px' }} align="right">{row.ytd}</TableCell>
       </TableRow>
-      <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+      <TableRow >
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={5} >
           <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box margin={1}>
+            <Box margin={0} style={{ marginRight: '30px' }} >
               
-              <Table size="small" aria-label="purchases">
-                <TableHead>
-                  <TableRow>
-                  <TableCell>Client Name</TableCell>
-                  <TableCell align="right">Last Year</TableCell>
-                  <TableCell align="right">MTD</TableCell>
-                  <TableCell align="right">QTD</TableCell>
-                  <TableCell align="right">YTD</TableCell>
+              <Table size="small" aria-label="purchases" style={{ marginLeft: '40px'  }} >
+                <TableHead style={{backgroundColor: '#e3f2fb' }}>
+                  <TableRow >
+                  <TableCell style={{ width: '170px', fontSize:'14px', color: '#000' }}>Client Name
+                  <img src={DownArrow} style={{ marginLeft: '75px', width: '14px', height: '14px'}} onClick={()=>{}}/>
+                  </TableCell>
+                  <TableCell style={{ width: '100px', fontSize:'14px', color: '#000' }} align="right">Last Year</TableCell>
+                  <TableCell style={{ width: '100px', fontSize:'14px', color: '#000' }} align="right">MTD</TableCell>
+                  <TableCell style={{ width: '100px', fontSize:'14px', color: '#000' }} align="right">QTD</TableCell>
+                  <TableCell style={{ width: '100px', fontSize:'14px', color: '#000' }} align="right">YTD</TableCell>
                     {/* <TableCell>clientName</TableCell>
                     <TableCell>Customer</TableCell>
                     <TableCell align="right">clientMTD</TableCell>
                     <TableCell align="right">Total price ($)</TableCell> */}
                   </TableRow>
                 </TableHead>
-                <TableBody>
+                <TableBody style={{ backgroundColor: '#f5f5f5' }}>
                   {row.history.map((historyRow:any) => (
                     <TableRow key={historyRow.clientName}>
                       <TableCell component="th" scope="row">{historyRow.clientName}</TableCell>
-                      <TableCell>{historyRow.clientLastYear}</TableCell>
+                      <TableCell align="right">{historyRow.clientLastYear}</TableCell>
                       <TableCell align="right">{historyRow.clientMTD}</TableCell>
                       <TableCell align="right">{historyRow.clientQTD}</TableCell>
                       <TableCell align="right">{historyRow.clientYTD}</TableCell>
@@ -130,21 +134,21 @@ export default function CollapsibleTable() {
   return (
 
       <TableContainer component={Paper}>
-        <Table aria-label="collapsible table" padding='none' >
+        <Table aria-label="collapsible table" padding='none' style={{ width: '1200px', fontFamily: 'Roboto'  }}>
           <TableHead>
             <TableRow>
               <h4 className={styles.assetMgmt}>Asset Management</h4>
             {/* <Typography variant="h6" gutterBottom component="div">
                 Asset Management
               </Typography> */}
-              </TableRow>
+              </TableRow >
             <TableRow>
-              <TableCell />
-              <TableCell></TableCell>
-              <TableCell align="right">Last Year</TableCell>
-              <TableCell align="right">MTD</TableCell>
-              <TableCell align="right">QTD</TableCell>
-              <TableCell align="right">YTD</TableCell>
+              {/* <TableCell style={{ width: '10px' }} /> */}
+              <TableCell style={{ width: '100px' }}></TableCell>
+              <TableCell style={{ width: '100px', fontSize:'14px', fontWeight: 'bold', color: '#262626' }} align="right">Last Year</TableCell>
+              <TableCell style={{ width: '100px', fontSize:'14px', fontWeight: 'bold', color: '#262626' }} align="right">MTD</TableCell>
+              <TableCell style={{ width: '100px', fontSize:'14px', fontWeight: 'bold', color: '#262626' }} align="right">QTD</TableCell>
+              <TableCell style={{ width: '100px', fontSize:'14px', fontWeight: 'bold', color: '#262626' }} align="right">YTD</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

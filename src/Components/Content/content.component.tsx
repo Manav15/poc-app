@@ -8,7 +8,7 @@ import { Box, Container, Grid } from '@material-ui/core';
 export const ContentComponent = () => {
     const { tables, contentContainer } = styles
     return (
-        <Box>
+        <Box sx={{ p: 2, border: '1px dashed grey' }}>
             <Grid container spacing={2}>
                 <Grid item>
                     <h3>Net Flows</h3>
