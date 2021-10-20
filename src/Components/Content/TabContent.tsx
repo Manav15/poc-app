@@ -135,7 +135,7 @@ export default function CollapsibleTable() {
   return (
 
       <TableContainer component={Paper}>
-        <Table aria-label="collapsible table" padding='none' style={{ width: '1200px', fontFamily: 'Roboto'  }}>
+        <Table aria-label="collapsible table" padding='none' style={{ width: '1060px', fontFamily: 'Roboto'  }}>
           <TableHead>
             <TableRow>
               <h4 className={styles.assetMgmt}>Asset Management</h4>

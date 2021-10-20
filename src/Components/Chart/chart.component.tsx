@@ -45,7 +45,7 @@ const Chart = () => {
 
                         </Nav>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-around', width: '15%' }} >
+                    <div style={{ display: 'flex', justifyContent: 'space-around', width: '20%' }} >
                         <div>
                             <FormControl fullWidth>
                                 <InputLabel id="demo-simple-select-label">Start Date</InputLabel>

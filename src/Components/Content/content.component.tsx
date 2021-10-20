@@ -25,15 +25,16 @@ export const ContentComponent = () => {
                         <div className="card">
                             <div className="card-body">
                                 <Chart />
-
                             </div>
                         </div>
                     </div>
                 </Grid>
                 <Grid item xs={12}  >
-                    <div className="card">
-                        <div className="card-body">
+                    <div className="container" >
+                        <div className="card">
+                            <div className="card-body">
                             {CollapsibleTable()}
+                            </div>
                         </div>
                     </div>
                 </Grid>

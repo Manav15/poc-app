@@ -6,8 +6,8 @@ import NativeSelect from '@mui/material/NativeSelect';
 
 export default function NativeSelectDemo() {
     return (
-        <Box sx={{ minWidth: 100 }}>
-            <FormControl fullWidth>
+        <Box style={{ width: '250px', marginLeft: '85px'}} sx={{ minWidth: 100 }}>
+            <FormControl fullWidth >
                 <InputLabel variant="standard" htmlFor="uncontrolled-native">
                     Advisor Id
                 </InputLabel>

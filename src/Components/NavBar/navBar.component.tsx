@@ -27,7 +27,7 @@ export default function CustomSeparator() {
   ];
 
   return (
-    <Stack spacing={2}>
+    <Stack spacing={2} style={{marginLeft: '-25px'}}>
       <Breadcrumbs
         separator={<NavigateNextIcon fontSize="small" />}
         aria-label="breadcrumb"
