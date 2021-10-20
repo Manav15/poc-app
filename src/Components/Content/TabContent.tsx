@@ -46,6 +46,7 @@ function Row(props:any) {
   const { row } = props;
   const [open, setOpen] = React.useState(false);
   const classes = useRowStyles();
+
   return (
     <React.Fragment>
       
@@ -73,7 +74,7 @@ function Row(props:any) {
               <Table size="small" aria-label="purchases" style={{ marginLeft: '40px'  }} >
                 <TableHead style={{backgroundColor: '#e3f2fb' }}>
                   <TableRow >
-                  <TableCell style={{ width: '170px', fontSize:'14px', color: '#000' }}>Client Name
+                  <TableCell style={{ width: '150px', fontSize:'14px', color: '#000' }}>Client Name
                   <img src={DownArrow} style={{ marginLeft: '75px', width: '14px', height: '14px'}} onClick={()=>{}}/>
                   </TableCell>
                   <TableCell style={{ width: '100px', fontSize:'14px', color: '#000' }} align="right">Last Year</TableCell>
