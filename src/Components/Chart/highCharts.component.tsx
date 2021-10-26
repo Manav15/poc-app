@@ -23,7 +23,7 @@ const options = {
             '2018',
             '2019',
             '2020',
-            '2021YTD'
+            '2021'
 
         ],
         crosshair: true
@@ -146,15 +146,15 @@ const options2 = {
     }]
 }
 
-const CustomHighcharts = (props:any) => {
-    const {startYear, endYear} = props;
-    const data =(startYear === 2012 && endYear === 2021) ? options : ((startYear === 2011 && endYear === 2020) ? options2 : options)
+const CustomHighcharts = (props: any) => {
+    const { startYear, endYear } = props;
+    const data = (startYear === 2012 && endYear === 2021) ? options : ((startYear === 2011 && endYear === 2020) ? options2 : options)
     return (
         <div>
             <HighchartsReact
                 highcharts={Highcharts}
                 options={data}
-                style = {{width: '50%'}}
+                style={{ width: '50%' }}
             />
         </div>
     )
