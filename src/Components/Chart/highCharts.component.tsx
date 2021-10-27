@@ -9,9 +9,6 @@ const options = {
     title: {
         text: ''
     },
-    // subtitle: {
-    //   text: 'Source: WorldClimate.com'
-    // },
     xAxis: {
         categories: [
             '2012',
@@ -42,9 +39,7 @@ const options = {
         shared: true,
         useHTML: true,
         backgroundColor: '#f7f7f7',
-        //   borderColor: '#f7f7f7',
         border: 'solid 0 rgba(255, 255, 255, 0)',
-        //   padding: '13px 15px 28px 17px',
         boxShadow: '0 3px 8px 0 rgba(25, 42, 70, 0.13)',
         marginLeft: '-5px',
         marginRight: '5px',
@@ -71,7 +66,8 @@ const options = {
         data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5],
         color: '#64b3ec'
 
-    }]
+    }],
+    credits: false
 }
 
 const options2 = {
@@ -81,9 +77,6 @@ const options2 = {
     title: {
         text: ''
     },
-    // subtitle: {
-    //   text: 'Source: WorldClimate.com'
-    // },
     xAxis: {
         categories: [
             '2011',
@@ -143,7 +136,8 @@ const options2 = {
         data: [70, 78.8, 98.5, 93.4, 144, 84.5, 105.0, 104.3, 91.2, 83.5],
         color: '#64b3ec'
 
-    }]
+    }],
+    credits: false
 }
 
 const CustomHighcharts = (props: any) => {
